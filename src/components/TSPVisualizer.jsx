@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { GeneticsAlgorithm } from './GeneticsAlgorithm';
+import { useState, useEffect, useRef } from 'react';
+import { GeneticsAlgorithm } from '../logic/GeneticsAlgorithm';
 
 const TSPVisualizer = () => {
     const [cities, setCities] = useState([]);
@@ -66,7 +66,7 @@ const TSPVisualizer = () => {
 
     const runAlgorithm = () => {
         const tsp = new GeneticsAlgorithm(20);
-        cities.forEach((city, index) => tsp.setNew({ x: city.x, y: city.y }));
+        cities.forEach((city) => tsp.setNew({ x: city.x, y: city.y }));
         tsp.createPaths();
         tsp.launchSimulation();
 
