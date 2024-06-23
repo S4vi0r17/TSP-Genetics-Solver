@@ -258,7 +258,8 @@ export class GeneticsAlgorithm {
 	}
 
 	generateNewCityBanning() {
-		while (true) {
+		let found = false;
+		while (!found) {
 			const testN = Math.floor(Math.random() * this.n);
 			if (!this.bannedCities.includes(testN)) {
 				this.bannedCities.push(testN);
