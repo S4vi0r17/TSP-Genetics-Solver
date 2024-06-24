@@ -114,8 +114,8 @@ const TSPVisualizer = () => {
                     <div className='flex gap-2'>
                         <button
                             onClick={runAlgorithm}
-                            disabled={cities.length < 2}
-                            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer ${cities.length < 2 ? 'bg-gray-500 cursor-not-allowed hover:bg-gray-500' : 'bg-blue-500'}`}
+                            disabled={cities.length < 6}
+                            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer ${cities.length < 6 ? 'bg-gray-500 cursor-not-allowed hover:bg-gray-500' : 'bg-blue-500'}`}
                         >
                             Run Algorithm
                         </button>
